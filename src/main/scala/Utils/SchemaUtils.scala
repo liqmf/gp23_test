@@ -14,10 +14,10 @@ object SchemaUtils {
       StructField("adplatformproviderid", IntegerType),
       StructField("sdkversion", StringType),
       StructField("adplatformkey", StringType),
-      StructField("putinmodeltype", IntegerType),
-      StructField("requestmode", IntegerType),
-      StructField("adprice", DoubleType),
-      StructField("adppprice", DoubleType),
+      StructField("putinmodeltype", IntegerType),//针对广告主的投放模式,1：展示量投放 2：点击量投放
+      StructField("requestmode", IntegerType),//数据请求方式（1:请求、2:展示、3:点击）
+      StructField("adprice", DoubleType),//广告价格
+      StructField("adppprice", DoubleType),//平台商价格
       StructField("requestdate", StringType),
       StructField("ip", StringType),
       StructField("appid", StringType),
@@ -37,7 +37,7 @@ object SchemaUtils {
       StructField("ispname", StringType),
       StructField("networkmannerid", IntegerType),
       StructField("networkmannername", StringType),
-      StructField("iseffective", IntegerType),
+      StructField("iseffective", IntegerType),//有效标识（有效指可以正常计费的）(0：无效 1：有效
       StructField("isbilling", IntegerType),
       StructField("adspacetype", IntegerType),
       StructField("adspacetypename", StringType),
@@ -45,14 +45,14 @@ object SchemaUtils {
       StructField("processnode", IntegerType),
       StructField("apptype", IntegerType),
       StructField("district", StringType),
-      StructField("paymode", IntegerType),
+      StructField("paymode", IntegerType),//针对平台商的支付模式，1：展示量投放(CPM) 2：点击
       StructField("isbid", IntegerType),
-      StructField("bidprice", DoubleType),
-      StructField("winprice", DoubleType),
-      StructField("iswin", IntegerType),
+      StructField("bidprice", DoubleType),//竞价价格
+      StructField("winprice", DoubleType),//竞价成功价格
+      StructField("iswin", IntegerType),//是否竞价成功
       StructField("cur", StringType),
       StructField("rate", DoubleType),
-      StructField("cnywinprice", DoubleType),
+      StructField("cnywinprice", DoubleType),//竞价成功转换成人民币的价格
       StructField("imei", StringType),
       StructField("mac", StringType),
       StructField("idfa", StringType),
