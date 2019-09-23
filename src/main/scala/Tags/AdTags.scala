@@ -5,6 +5,18 @@ import org.apache.commons.lang3.StringUtils
 import org.apache.spark.sql.Row
 
 /**
+  *
+  * Description:xxxx<br/>
+  *
+  * Copyright(c)<br/>
+  *
+  * All rights reserved.
+  *
+  * @author李海畅
+  * @version:1.0
+  *
+  */
+/**
   * 广告标签
   */
 object AdTags extends TagInterface{

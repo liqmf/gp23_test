@@ -4,6 +4,18 @@ import org.apache.spark.sql.{Row, SQLContext}
 import org.apache.spark.{SparkConf, SparkContext}
 
 /**
+  *
+  * Description:xxxx<br/>
+  *
+  * Copyright(c)<br/>
+  *
+  * All rights reserved.
+  *
+  * @author李海畅
+  * @version:1.0
+  *
+  */
+/**
   * 进行数据格式转换
   */
 object Log2parquet {

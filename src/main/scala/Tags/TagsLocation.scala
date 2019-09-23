@@ -16,14 +16,21 @@ import org.apache.spark.sql.Row
   * @version:1.0
   *
   */
-object AreaTags extends  TagInterface{
+object TagsLocation  extends TagInterface{
   override def makeTags(args: Any*): List[(String, Int)] = {
-    val row = args(0).asInstanceOf[Row]
-    val provincename = row.getAs[String]("provincename")
-    val cityname = row.getAs[String]("cityname")
     var list = List[(String,Int)]()
-    if(StringUtils.isNoneBlank(provincename)) list :+= ("ZP" + provincename, 1)
-    if(StringUtils.isNoneBlank(cityname)) list :+= ("ZC" + cityname, 1)
+
+    val row = args(0).asInstanceOf[Row]
+    // 获取地域数据
+    val pro = row.getAs[String]("provincename")
+    val city = row.getAs[String]("cityname")
+    if(StringUtils.isNotBlank(pro)){
+      list :+=("ZP"+pro,1)
+    }
+    if(StringUtils.isNotBlank(city)){
+      list :+=("ZC"+city,1)
+    }
     list
   }
+
 }

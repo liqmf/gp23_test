@@ -1,25 +1,31 @@
 package Tags
 
 import Utils.TagInterface
+import org.apache.spark.broadcast.Broadcast
 import org.apache.spark.sql.Row
 
+/**
+  *
+  * Description:xxxx<br/>
+  *
+  * Copyright(c)<br/>
+  *
+  * All rights reserved.
+  *
+  * @author李海畅
+  * @version:1.0
+  *
+  */
 object KeyWordTags extends  TagInterface{
   override def makeTags(args: Any*): List[(String, Int)] = {
-    val row = args(0).asInstanceOf[Row]
-    val keywords = row.getAs[String]("keywords")
     var list = List[(String,Int)]()
-    if(!keywords.contains("\\|")) {
-      if (keywords.length > 3 && keywords.length < 8) {
-        list :+= ("K" + keywords, 1)
-      }
-    }else {
-      val keyWordArr = keywords.split("\\|")
-      for (i <- 0 until keyWordArr.length) {
-        if (keyWordArr(i).length > 3 && keyWordArr(i).length < 8) {
-          list :+= ("k" + keyWordArr(i), 1)
-        }
-      }
-    }
+
+    val row = args(0).asInstanceOf[Row]
+    val stopWords = args(1).asInstanceOf[Broadcast[collection.Map[String, Int]]]
+    // 取值判断
+    row.getAs[String]("keywords").split("\\|")
+      .filter(word=>word.length>=3&& word.length<=8&& !stopWords.value.contains(word))
+      .foreach(word=>list:+=("K"+word,1))
     list
   }
 }

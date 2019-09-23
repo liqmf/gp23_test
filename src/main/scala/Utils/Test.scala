@@ -1,6 +1,6 @@
 package Utils
 
-import com.Tags.{BusinessTag, TagsAd}
+
 import org.apache.spark.sql.SparkSession
 
 import scala.util.Random
@@ -40,7 +40,7 @@ import scala.util.Random
 object Test {
 
   def main(args: Array[String]): Unit = {
-    System.setProperty("hadoop.home.dir", "D:\\Huohu\\下载\\hadoop-common-2.2.0-bin-master")
+    System.setProperty("hadoop.home.dir", "D:\\hadoop-common-2.2.0-bin-master")
     val spark = SparkSession.builder().appName("Tags").master("local").getOrCreate()
     import spark.implicits._
 
@@ -198,7 +198,7 @@ object Test {
             arr(83),
             arr(84)
           )
-      ).saveAsTextFile("D:\\tb")
+      ).saveAsTextFile("D:\\aaa")
     //      .map(arr=>List(
     //      arr(2).replace("0",""+arr4(Random.nextInt(arr4.length))+""),
     //      arr(8).replace("1",""+arr3(Random.nextInt(arr3.length))+""),
