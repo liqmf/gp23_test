@@ -58,7 +58,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Tags/BussinessTag.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-801">
+            <state relative-caret-position="-153">
               <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding>
                 <element signature="e#193#326#0" />
@@ -457,7 +457,7 @@
       <workItem from="1568968309098" duration="45000" />
       <workItem from="1569028628206" duration="3866000" />
       <workItem from="1569034560049" duration="8049000" />
-      <workItem from="1569249494031" duration="7004000" />
+      <workItem from="1569249494031" duration="7707000" />
     </task>
     <task id="LOCAL-00001" summary="change1">
       <created>1568703889455</created>
@@ -508,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1569255841644</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="用户画像分析">
+      <created>1569257249567</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1569257249567</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100044000" />
+    <option name="totallyTimeSpent" value="100747000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -524,7 +531,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16868381" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -887,7 +894,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Tags/BussinessTag.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-801">
+        <state relative-caret-position="-153">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding>
             <element signature="e#193#326#0" />
