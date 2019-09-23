@@ -1,6 +1,18 @@
 package Utils
 
 /**
+  *
+  * Description:xxxx<br/>
+  *
+  * Copyright(c)<br/>
+  *
+  * All rights reserved.
+  *
+  * @author李海畅
+  * @version:1.0
+  *
+  */
+/**
   * 处理指标统计工具类
   */
 object RptUtils {
